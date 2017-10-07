@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#cccccc"
+    tools:context="com.example.casper.test.MainActivity">
+
+    <Button
+        android:id="@+id/Continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="clickCON"
+        android:text="繼續遊戲" />
+
+    <Button
+        android:id="@+id/New"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Continue"
+        android:layout_alignStart="@+id/Continue"
+        android:onClick="clickNEW"
+        android:text="新遊戲" />
+
+    <Button
+        android:id="@+id/End"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Continue"
+        android:layout_centerHorizontal="true"
+        android:onClick="clickEND"
+        android:text="結束遊戲" />
+
+
+</RelativeLayout>
