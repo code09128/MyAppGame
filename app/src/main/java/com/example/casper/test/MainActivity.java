@@ -1,6 +1,7 @@
 package com.example.casper.test;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -55,7 +56,11 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
 
     private void jumptomain2() {
 
-        setContentView(R.layout.activity_actor);
+        Intent in = new Intent();
+        in.setClass(MainActivity.this,ActorActivity.class);
+        startActivity(in);
+        MainActivity.this.finish();
+        //setContentView(R.layout.activity_actor);
 
     }
 

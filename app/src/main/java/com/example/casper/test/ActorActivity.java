@@ -13,19 +13,26 @@ public class ActorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actor);
 
-
         TextView tv1 = (TextView) findViewById (R.id.textView3);
-        tv1.setText("input");
 
-        init();
+        for (int i=0; i<50; i++)
+            tv1.setText(tv1.getText()+"\n"+Integer.toString(i));
+
+        /*
+        for (int i=0; i<=5; i++) {
+            for (int j=0; j<i; j++)
+                tv1.setText(tv1.getText() + "*");
+            tv1.setText((tv1.getText()+"\n"));
+        }
+        */
+
+
+        //tv1.setText("input");
+        //init();
 
     }
 
-    private void init() {
 
-
-
-    }
 
 
     public void BOSS(View v){
@@ -36,4 +43,9 @@ public class ActorActivity extends AppCompatActivity {
 
     }
 
+    public void equip(View view) {
+
+
+
+    }
 }
