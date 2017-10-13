@@ -2,6 +2,7 @@ package com.example.casper.test;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -13,10 +14,24 @@ public class ActorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actor);
 
-        TextView tv1 = (TextView) findViewById (R.id.textView3);
+        final TextView tv1 = (TextView) findViewById (R.id.textView3);
 
-        for (int i=0; i<50; i++)
-            tv1.setText(tv1.getText()+"\n"+Integer.toString(i));
+
+
+        new CountDownTimer(5000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                tv1.setText("準備開始戰鬥: " + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+
+                for (int i=0; i<50; i++)
+                    tv1.setText(tv1.getText()+"\n"+Integer.toString(i));
+                tv1.setText("done!");
+            }
+
+        }.start();
 
         /*
         for (int i=0; i<=5; i++) {
@@ -27,9 +42,7 @@ public class ActorActivity extends AppCompatActivity {
         */
 
 
-        //tv1.setText("input");
         //init();
-
     }
 
 
