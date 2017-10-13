@@ -61,4 +61,11 @@ public class ActorActivity extends AppCompatActivity {
 
 
     }
+    //狀態按鈕進入
+    public void status(View view){
+
+        status_Fragment dialog =new status_Fragment();
+
+        dialog.show(getSupportFragmentManager(),"MyDialogFragment");
+    }
 }
